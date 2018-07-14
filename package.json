@@ -1,0 +1,26 @@
+{
+  "name": "scraperfun",
+  "version": "1.0.0",
+  "description": "A scraper built for the fine folks at Hubdoc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anthematics/scraperfun.git"
+  },
+  "keywords": [
+    "scraper"
+  ],
+  "author": "Jason Harder",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Anthematics/scraperfun/issues"
+  },
+  "homepage": "https://github.com/Anthematics/scraperfun#readme",
+  "dependencies": {
+    "d3-dsv": "^1.0.8",
+    "nightmare": "^3.0.1"
+  }
+}

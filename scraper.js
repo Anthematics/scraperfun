@@ -2,22 +2,28 @@ const Nightmare = require('nightmare')
 const nightmare = Nightmare({ show: true })
 let fs = require('fs');
 
+
 nightmare
   .goto('https://www.google.com/')
   .type('#lst-ib', 'datatables')
   .click('input[value= "Google Search"]')
   .click('.rc >.r > a')
+  .select('select[name="example_length"]',"100")
+
 
   .evaluate(function() {
-    let returnedData = [];
-    const h1 = document.querySelector('h1')
-    h1.innerHTML = "this works"
+    let people = document.querySelectorAll('[role="row"]');
+    return dataTable
   })
 
   .then(console.log)
   .catch(error =>{
     console.error('fail')
   })
+//   .evaluate(function() {
+//     document.getElementsByName("selectRegionAndDistrict")[0].options[3].selected = true;
+// })
+
 
 /* b)You will find a table example with some data.
     Please fetch/extract data from table into array.

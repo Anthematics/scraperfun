@@ -13,7 +13,7 @@ nightmare
 
   .evaluate(function() {
     let people = document.querySelectorAll('[role="row"]');
-    return dataTable
+    return people
   })
 
   .then(console.log)

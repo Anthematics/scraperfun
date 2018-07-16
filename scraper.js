@@ -13,8 +13,12 @@ nightmare
 
   .evaluate(function() {
     let people = document.querySelectorAll('[role="row"]');
-    return people
+    peopleArray = [...people]
+    return peopleArray
   })
+
+  // You can either use a spread , use a for of loop or use array from
+  // or return Object.values.
 
   .then(console.log)
   .catch(error =>{

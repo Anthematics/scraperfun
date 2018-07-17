@@ -1,5 +1,5 @@
 const Nightmare = require('nightmare')
-const nightmare = Nightmare({ show: true })
+const nightmare = Nightmare({ show: false  })
 let fs = require('fs');
 
 
@@ -12,11 +12,10 @@ nightmare
 
 
   .evaluate(function() {
-    const people = document.querySelectorAll('[role="row"]');
-    peopleArray = [...people]
-    const names = peopleArray.map(person => person.innerHTML)
-    return names
-    console.log(names)
+    const peopleList = document.querySelectorAll('[role="row"]');
+    const peopleArray = [...peopleList]
+    const people = peopleArray.map(personEntry => personEntry.innerText)
+    return people
   })
 
 

@@ -1,6 +1,8 @@
 const Nightmare = require('nightmare')
 const nightmare = Nightmare({ show: false  })
-let fs = require('fs');
+const fs = require('fs');
+
+
 nightmare
   .goto('https://www.google.com/')
   .type('#lst-ib', 'datatables')
@@ -13,12 +15,10 @@ nightmare
     const peopleList = document.querySelectorAll("th,td");
     const peopleArray = [...peopleList]
     const people = peopleArray.map(personEntry => personEntry.innerText)
-    //fs.writeFileSync('results/personnel.csv', JSON.stringify(people), 'utf8');
     return people
   })
-  .end()
+
   .then(console.log)
   .catch(error =>{
     console.error('fail')
   })
-

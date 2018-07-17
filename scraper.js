@@ -16,8 +16,9 @@ nightmare
     const peopleArray = [...peopleList]
     const people = peopleArray.map(personEntry => personEntry.innerText)
     return people
-  })
 
+  })
+  .end()
   .then(console.log)
   .catch(error =>{
     console.error('fail')

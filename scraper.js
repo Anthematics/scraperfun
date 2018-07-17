@@ -1,8 +1,6 @@
 const Nightmare = require('nightmare')
 const nightmare = Nightmare({ show: false  })
 let fs = require('fs');
-
-
 nightmare
   .goto('https://www.google.com/')
   .type('#lst-ib', 'datatables')
@@ -12,32 +10,15 @@ nightmare
 
 
   .evaluate(function() {
-    const peopleList = document.querySelectorAll('[role="row"]');
+    const peopleList = document.querySelectorAll("th,td");
     const peopleArray = [...peopleList]
     const people = peopleArray.map(personEntry => personEntry.innerText)
+    //fs.writeFileSync('results/personnel.csv', JSON.stringify(people), 'utf8');
     return people
   })
-
-
-  // You can either use a spread , use a for of loop or use array from
-  // or return Object.values.
-
+  .end()
   .then(console.log)
   .catch(error =>{
     console.error('fail')
   })
-//   .evaluate(function() {
-//     document.getElementsByName("selectRegionAndDistrict")[0].options[3].selected = true;
-// })
 
-
-/* b)You will find a table example with some data.
-    Please fetch/extract data from table into array.
-    In the array you will have objects.
-    An object will be a row from the table.
-    The object properties will be data from every table column.
-    Hint: Many javascript scraping frameworks like Puppetteer and
-    Nightmare implement a .evaluate which would allow you to use
-    .map(function(){ // return object with data }).toArray() from Jquery.
-
-    c)Please export the array as a CSV */

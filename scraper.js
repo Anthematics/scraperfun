@@ -12,10 +12,13 @@ nightmare
 
 
   .evaluate(function() {
-    let people = document.querySelectorAll('[role="row"]');
+    const people = document.querySelectorAll('[role="row"]');
     peopleArray = [...people]
-    return peopleArray
+    const names = peopleArray.map(person => person.innerHTML)
+    return names
+    console.log(names)
   })
+
 
   // You can either use a spread , use a for of loop or use array from
   // or return Object.values.

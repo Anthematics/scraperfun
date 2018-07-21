@@ -15,11 +15,18 @@ nightmare
     const peopleList = document.querySelectorAll("th,td");
     const peopleArray = [...peopleList]
     const people = peopleArray.map(personEntry => personEntry.innerText)
-    return people
 
+    return people
   })
-  .end()
-  .then(console.log)
+
+
+  .then(people => fs.writeFile('testfile.csv',JSON.stringify(people),'utf8', function(err) {
+    if (err) {
+      console.log('File not saved or corrupt');
+    } else {
+      console.log('your file is saved')
+    }
+  }))
   .catch(error =>{
     console.error('fail')
   })

@@ -19,6 +19,8 @@ nightmare
     return people
   })
 
+  .end()
+
   .then(people => fs.writeFile('testfile.csv',JSON.stringify(people),'utf8', function(err) {
     if (err) {
       console.log('File not saved or corrupt');

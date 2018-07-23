@@ -12,16 +12,22 @@ nightmare
 
 
   .evaluate(function() {
-    const peopleList = document.querySelectorAll("th,td");
-    const peopleArray = [...peopleList]
-    const people = peopleArray.map(personEntry => personEntry.innerText)
+    const headerFields = document.querySelectorAll("#example thead tr th")
+    const peopleList = document.querySelectorAll("#example tbody tr");
 
-    return people
+    const people = [...peopleList].map(personEntry => personEntry.innerText)
+
+    const header = [...headerFields].map(headerEntry => headerEntry.innerText)
+
+    return {
+      list: header,
+      log: people
+    }
   })
 
   .end()
 
-  .then(people => fs.writeFile('testfile.csv',JSON.stringify(people),'utf8', function(err) {
+  .then(result => fs.writeFile('testfile.csv',JSON.stringify(result),'utf8', function(err) {
     if (err) {
       console.log('File not saved or corrupt');
     } else {

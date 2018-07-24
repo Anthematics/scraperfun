@@ -14,19 +14,18 @@ nightmare
   .evaluate(function() {
     const headerFields = document.querySelectorAll("#example thead tr th")
     const peopleList = document.querySelectorAll("#example tbody tr");
-
-    const people = [...peopleList].map(personEntry => personEntry.innerText)
+    const people = Array.from(peopleList).map(entry => entry.innerText.replace(/\t/g, ','))
     const header = [...headerFields].map(headerEntry => headerEntry.innerText)
 
     return {
-      list: header,
-      log: people
+      log: header,
+      list: people
     }
   })
 
   .end()
 
-  .then(result => fs.writeFile('People.csv',JSON.stringify(result),'utf8', function(err) {
+  .then(result => fs.writeFile('testfile.csv',JSON.stringify(result),'utf8', function(err) {
     if (err) {
       console.log('File not saved or corrupt');
     } else {

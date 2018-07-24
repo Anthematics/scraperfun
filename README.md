@@ -9,7 +9,7 @@ Welcome to my Github profile & take a look around ! I hope you like my coding ch
 Scraper formatting was fixed last night but does not pull salary data , scraper today pulls salary data but needs format fix.
 Also occasionally it throws the error unable to find '.rc >.r > a' -> I rerun the file since it is intermittant it seems.
 
-My other branch has better formatting but no salary data.
+My other branch ('formatting') has better formatting but no salary data.
 
 
 <h3>Related </h3>

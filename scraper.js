@@ -1,5 +1,5 @@
 const Nightmare = require('nightmare')
-const nightmare = Nightmare({ show: false , executionTimeout: 100000})
+const nightmare = Nightmare({ show: true , executionTimeout: 100000})
 const fs = require('fs');
 
 
@@ -8,14 +8,14 @@ nightmare
 .type('#lst-ib', 'datatables')
 .click('input[value= "Google Search"]')
 .click('.rc >.r > a')
+.click('.sorting_1::before')
 .select('select[name="example_length"]', "100")
 
 .evaluate(function () {
 const headerFields = document.querySelectorAll("#example thead tr th")
 const peopleList = document.querySelectorAll("#example tbody tr");
-const people = Array.from(peopleList).map(entry => entry.innerText.replace(/\t/g, ',')).join('\n')
+const people = Array.from(peopleList).map(peopleEntry => peopleEntry.innerText.replace(/\t/g, ',')).join('\n')
 const header = Array.from(headerFields).map(headerEntry => headerEntry.innerText)
-
 return [header, people].join('\n')
 })
 

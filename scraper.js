@@ -14,12 +14,13 @@ nightmare
 const headerFields = document.querySelectorAll("th,td")
 const peopleArray = []
 const peopleList = document.querySelectorAll("#example tbody tr");
-const people = Array.from(peopleList).map(entry => [...entry.querySelectorAll("td")]
-    .map(salaryData => {
-        peopleArray.push(salaryData.innerText)
-        return salaryData.innerText;
-    }));
-    peopleArray.push(people)
+const people = Array.from(peopleList).map(entry =>
+    peopleArray.push([...entry.query])
+        .map(salaryData => {
+            return salaryData.innerText.join(',')
+        })
+    );
+
     const header = Array.from(headerFields).map(headerEntry => headerEntry.innerText)
     return [header, peopleArray].join('\n')
 })

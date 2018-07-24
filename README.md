@@ -2,9 +2,11 @@ Hi Team Hubdoc!
 
 Welcome to my Github profile & take a look around ! I hope you like my coding choices.
 
+*Please git pull Wednesday morning since I have one final issue to sort out*
+
 <h3> Issues </h3>
 
-scraper formatting was fixed last night but does not pull salary data , scraper today pulls salary data but needs format fix.
+Scraper formatting was fixed last night but does not pull salary data , scraper today pulls salary data but needs format fix.
 Also occasionally it throws the error unable to find '.rc >.r > a' -> I rerun the file since it is intermittant it seems.
 
 

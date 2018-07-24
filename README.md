@@ -2,7 +2,7 @@ Hi Team Hubdoc!
 
 Welcome to my Github profile & take a look around ! I hope you like my coding choices.
 
-#Issues
+<h3> Issues </h3>
 
 The scraper at this moment (July 24) does not seem to grab salary data (this was not an issue previous to the 24th)- I will try to come back, unhide the salary data and get it added to the table as well. Also occasionally it throws the error unable to find '.rc >.r > a' -> I rerun the file since it is intermittant it seems.
 

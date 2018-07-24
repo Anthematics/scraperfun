@@ -13,8 +13,6 @@ nightmare
 .evaluate(function () {
 const headerFields = document.querySelectorAll("#example thead tr th")
 const peopleList = document.querySelectorAll("#example tbody tr");
-const salaryList = document.querySelectorAll(".dt-body-right")
-
 const people = Array.from(peopleList).map(entry => entry.innerText.replace(/\t/g, ',')).join('\n')
 const header = Array.from(headerFields).map(headerEntry => headerEntry.innerText)
 

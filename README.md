@@ -4,7 +4,8 @@ Welcome to my Github profile & take a look around ! I hope you like my coding ch
 
 <h3> Issues </h3>
 
-The scraper at this moment (July 24) does not seem to grab salary data (this was not an issue previous to the 24th)- I will try to come back, unhide the salary data and get it added to the table as well. Also occasionally it throws the error unable to find '.rc >.r > a' -> I rerun the file since it is intermittant it seems.
+scraper formatting was fixed last night but does not pull salary data , scraper today pulls salary data but needs format fix.
+Also occasionally it throws the error unable to find '.rc >.r > a' -> I rerun the file since it is intermittant it seems.
 
 
 <h3>Related </h3>

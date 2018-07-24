@@ -13,12 +13,13 @@ nightmare
 .evaluate(function () {
 const headerFields = document.querySelectorAll("#example thead tr th")
 const peopleList = document.querySelectorAll("#example tbody tr");
-const salaryList = document.querySelectorAll(".dt-body-right")
+const salaryList = document.getElementsByClassName('dt-body-right')
 
+const salary = Array.from(salaryList).map(salaryEntry => salaryEntry.innerHTML)
 const people = Array.from(peopleList).map(entry => entry.innerText.replace(/\t/g, ',')).join('\n')
 const header = Array.from(headerFields).map(headerEntry => headerEntry.innerText)
 
-return [header, people].join('\n')
+return [header, people , salary].join('\n')
 })
 
 .end()

@@ -12,10 +12,16 @@ nightmare
 
 .evaluate(function () {
 const headerFields = document.querySelectorAll("th,td")
+const peopleArray = []
 const peopleList = document.querySelectorAll("#example tbody tr");
-const people = Array.from(peopleList).map(entry => entry.innerText.replace(/\t/g, ',')).join('\n')
-const header = Array.from(headerFields).map(headerEntry => headerEntry.innerText)
-return [header, people].join('\n')
+const people = Array.from(peopleList).map(entry => [...entry.querySelectorAll("td")]
+    .map(salaryData => {
+        peopleArray.push(salaryData.innerText)
+        return salaryData.innerText;
+    }));
+    peopleArray.push(people)
+    const header = Array.from(headerFields).map(headerEntry => headerEntry.innerText)
+    return [header, peopleArray].join('\n')
 })
 
 .end()
@@ -27,3 +33,4 @@ console.log('your file is saved as Resultfile.csv')
 .catch((err) => {
 console.error(err);
 });
+

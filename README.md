@@ -2,7 +2,7 @@ Hi Team Hubdoc!
 
 Welcome to my Github profile & take a look around ! I hope you like my coding choices.
 
-*Please git pull Wednesday morning since I have one final issue to sort out*
+*Please git pull Wednesday morning since I have one final issue to sort out.*
 
 <h3> Issues </h3>
 

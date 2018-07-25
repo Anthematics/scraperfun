@@ -14,7 +14,7 @@ nightmare
 const headerFields = document.querySelectorAll("#example thead tr th")
 const peopleList = document.querySelectorAll("#example tbody tr");
 
-const people = [name,position,office,age,startdate,salary] = Array.from(peopleList).map(entry => entry.innerText).join('\n')
+const people = Array.from(peopleList).map(entry => entry.innerText).join('\n')
 
 const header = Array.from(headerFields).map(headerEntry => headerEntry.innerText)
 

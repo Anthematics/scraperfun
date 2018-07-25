@@ -3,9 +3,9 @@ Hi Team Hubdoc!
 Welcome to my Github profile & take a look around. I learned quite a bit and I hope you like my coding choices.
 
 <h3> Notes </h3>
-1) Solution is built with Nightmare.
-2) Please look for Resultfile.csv in the same folder you run the scraper (scraper.js) in.
-3) Sometimes it returns with an error ("unable to find element .click('.rc >.r > a')") I think it may have to do with running the program more than once in a short time frame , but just in case it doesn't , run scraper.js again.
+1) Solution is built with Nightmare.<br>
+2) Please look for Resultfile.csv in the same folder you run the scraper (scraper.js) in.  <br>
+3) Sometimes it returns with an error ("unable to find element .click('.rc >.r > a')") I think it may have to do with running the program more than once in a short time frame , but just in case it doesn't , run scraper.js again. <br>
 
 <h3> Warmups </h3>
 

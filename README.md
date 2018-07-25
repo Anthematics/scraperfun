@@ -21,7 +21,7 @@ I had built another scraper in November of last year under this repo (if you're 
 
 <h3>Contact </h3>
 
-Feel free to email me at Jasonharder2@gmail.com if you have any questions or feedback , since I love to answer questions and my code is best improved with feedback.
+Please feel free to email me at Jasonharder2@gmail.com if you have any questions or feedback.
 
 
 Regards , Jason

@@ -6,8 +6,7 @@ Welcome to my Github profile & take a look around. I learned quite a bit and I h
 
 <h3> Issues </h3>
 
-Salary Data Needs Sanitization (commas are seperating so I must put that value in quotes)
-
+Salary Data Needs Sanitization (commas are seperating numbers in the salary field so I should turn the value into a string.
 
 <h3>Related </h3>
 

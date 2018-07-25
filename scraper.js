@@ -12,10 +12,10 @@ nightmare
 
 .evaluate(function () {
 const headerFields = document.querySelectorAll("#example thead tr th")
-const peopleList = document.querySelectorAll("#example tbody tr");
+const peopleRows = document.querySelectorAll("#example tbody tr");
 
-const people = Array.from(peopleList).map(entry => entry.innerText).join('\n')
-
+const peopleList = Array.from(peopleRows).map(row => Array.from(row.children).map(entry => entry.innerText).join(", "));
+const people = peopleList.join('\n');
 const header = Array.from(headerFields).map(headerEntry => headerEntry.innerText)
 
 return [header, people].join('\n')

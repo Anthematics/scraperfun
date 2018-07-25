@@ -13,7 +13,7 @@ nightmare
 .evaluate(function () {
 const headerFields = document.querySelectorAll("#example thead tr th")
 const peopleRows = document.querySelectorAll("#example tbody tr");
-const peopleList = Array.from(peopleRows).map(peopleRow => Array.from(peopleRow.children).map(entry => entry.innerText));
+const peopleList = Array.from(peopleRows).map(peopleRow => Array.from(peopleRow.children).map(entry => `'${entry.innerText}'`.replace(/,/g, "")));
 const people = peopleList.join('\n')
 const header = Array.from(headerFields).map(headerEntry => headerEntry.innerText)
 
@@ -22,7 +22,7 @@ return [header, people].join('\n')
 
 .end()
 
-.then(result => fs.writeFile('./Resultfile.csv', result, 'utf8', function (err) {
+.then(result => fs.writeFile('./Resultfile.csv',result, 'utf8', function (err) {
 if (err) throw err;
 console.log('your file is saved as Resultfile.csv')
 }))

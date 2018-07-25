@@ -11,18 +11,14 @@ nightmare
 .select('select[name="example_length"]', "100")
 
 .evaluate(function () {
-const headerFields = document.querySelectorAll("th,td")
-const peopleArray = []
-const peopleList = document.querySelectorAll("#example tbody tr");
-const people = Array.from(peopleList).map(entry =>
-    peopleArray.push([...entry.query])
-        .map(salaryData => {
-            return salaryData.innerText.join(',')
-        })
-    );
+const headerFields = document.querySelectorAll("#example thead tr th")
+const peopleRows = document.querySelectorAll("#example tbody tr");
 
-    const header = Array.from(headerFields).map(headerEntry => headerEntry.innerText)
-    return [header, peopleArray].join('\n')
+const peopleList = Array.from(peopleRows).map(row => Array.from(row.children).map(entry => entry.innerText).join(", "));
+const people = peopleList.join('\n');
+const header = Array.from(headerFields).map(headerEntry => headerEntry.innerText)
+
+return [header, people].join('\n')
 })
 
 .end()

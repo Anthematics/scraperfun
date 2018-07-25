@@ -6,9 +6,13 @@ Welcome to my Github profile & take a look around. I learned quite a bit and I h
 1) Solution is built with Nightmare.
 2) Please look for Resultfile.csv in the same folder you run the scraper (scraper.js) in.
 
-<h3> Issues </h3>
+<h3> Warmups </h3>
 
+I may add more warmup exercises to the repo over the coming week or so.
 
+Finished:
+
+Warmup 7
 
 <h3>Related </h3>
 

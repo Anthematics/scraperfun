@@ -13,7 +13,7 @@ nightmare
 .evaluate(function () {
 const headerFields = document.querySelectorAll("#example thead tr th")
 const peopleRows = document.querySelectorAll("#example tbody tr");
-const peopleList = Array.from(peopleRows).map(peopleRow => Array.from(peopleRow.children).map(entry => entry.innerText).join(","));
+const peopleList = Array.from(peopleRows).map(peopleRow => Array.from(peopleRow.children).map(entry => entry.innerText));
 const people = peopleList.join('\n')
 const header = Array.from(headerFields).map(headerEntry => headerEntry.innerText)
 

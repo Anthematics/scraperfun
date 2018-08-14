@@ -1,4 +1,4 @@
-Hi Team Hubdoc!
+Hi
 
 Welcome to my Github profile & take a look around. I learned quite a bit and I hope you like my coding choices.
 
